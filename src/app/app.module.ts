@@ -43,7 +43,7 @@ export class AppModule {
   constructor(swUpdate: SwUpdate, matSnackBar: MatSnackBar) {
     swUpdate.available.subscribe(() => {
       matSnackBar
-        .open('message', 'action')
+        .open('Es gibt neue Inhalte', 'Aktualisieren')
         .onAction()
         .subscribe(() => {
           window.location.reload();
