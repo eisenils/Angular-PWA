@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Todo } from '../todo';
 import { HttpClient } from '@angular/common/http';
 import { SwPush } from '@angular/service-worker';
+import { ShareService } from '../share.service';
 
 @Component({
   selector: 'app-todos',
@@ -14,7 +15,8 @@ export class TodosComponent implements OnInit {
   constructor(
     private todoService: TodoService,
     private httpClient: HttpClient,
-    private swPush: SwPush
+    private swPush: SwPush,
+    public shareService: ShareService
   ) {}
 
   ngOnInit(): void {
